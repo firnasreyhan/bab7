@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         kelas = findViewById(R.id.kelas);
 
         bt_insert = findViewById(R.id.bt_insert);
-        bt_update = findViewById(R.id.bt_insert);
+        bt_update = findViewById(R.id.bt_update);
         bt_delete = findViewById(R.id.bt_delete);
         bt_view = findViewById(R.id.bt_view);
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
                 String kelasTXT = kelas.getText().toString();
 
                 Boolean checkinsertdata = db.insertuserdata(idTXT, nimTXT, namaTXT, kelasTXT);
-                if (checkinsertdata==true)
+                if (checkinsertdata)
                     Toast.makeText(MainActivity.this, "New Entry Inserted", Toast.LENGTH_SHORT).show();
                 else
                     Toast.makeText(MainActivity.this, "New Entry Not Inserted", Toast.LENGTH_SHORT).show();
